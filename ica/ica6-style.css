@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-  }
+}
   
   html {
     font-family: sans-serif;
@@ -18,11 +18,10 @@
     position: relative;
     background-image: url(../img/top-image.png), url(../img/bottom-image.png);
     background-repeat: no-repeat, no-repeat;
-    background-color: white;
     background-position: top center, bottom center;
+    background-color: white;
     border-top: 1mm solid red;
     border-bottom: 1mm solid red;
-  
   }
   
   address {
