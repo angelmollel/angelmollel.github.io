@@ -19,7 +19,7 @@
     background-image: url(../img/top-image.png), url(../img/bottom-image.png);
     background-repeat: no-repeat, no-repeat;
     background-position: top center, bottom center;
-    background-color: white;
+    background-color: rgba(237, 237, 237, 0.483); 
     border-top: 1mm solid red;
     border-bottom: 1mm solid red;
   }
