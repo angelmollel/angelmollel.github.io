@@ -1,0 +1,62 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 5%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity and color as needed */
+    color: white;
+    padding: 10px;
+    border: 2px solid white; /* Add a border */
+    box-sizing: border-box; /* Include the border in width and height */
+  }
+  
+  .overlay-1 {
+    left: 0;
+    width: 25%;
+    height: 20%;
+  }
+  
+  .overlay-2 {
+    width: 90%;
+    height: 10%;
+    left: 50%;
+    transform: translateX(-45%);
+    font-size: 40px; 
+    background-color: white;
+    color: black;
+    padding: 6px; 
+    border-top: 3px solid red;
+  }
+
+.overlay-3 {
+    right: 7%;
+  }
+  
+  .overlay-4 {
+    left: 93%;
+    width: 7%; /* Adjust width to 10% for half and half effect */
+    height: 10%;
+    background: linear-gradient(to bottom right, rgb(46, 46, 112) 70%, white 50%); 
+    padding: 0; 
+    border-top: 3px solid red;
+  }
+  
+  .weather-time {
+    color: white; 
+    font-size: 20px;
+    left: 20%;
+  }
+
+  
