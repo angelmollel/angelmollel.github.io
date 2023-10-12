@@ -7,7 +7,6 @@ body{
     display:flex;
     background-color: orangered;
     flex-direction: row;
-    position: center;
     /* flex-direction: row; */
 }
 #flex-parent p{
