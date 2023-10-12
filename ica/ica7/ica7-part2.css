@@ -6,6 +6,8 @@ body{
 #flex-parent{
     display:flex;
     background-color: orangered;
+    flex-direction: row;
+    position: center;
     /* flex-direction: row; */
 }
 #flex-parent p{
@@ -13,57 +15,76 @@ body{
 }
 
 #flex-child1{
-     order: 3;
+     order: 2;
 }
 #flex-child2{
- order:4;
+ order:3;
 }
 #flex-child3{
-    order:2;
+    order:1;
 }
 #flex-child4{
-     order:1;
+     order:0;
 }
 
 
 #grid-parent{
     display:grid;
-    grid-template-columns: repeat(3,33vw);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 #grid-parent h1{
     background-color: grey;
     padding:3vw 5vh;
     margin:5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
     
 }
 #no0{
-    grid-column: 2/3;
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
 }
 #no1{
-
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1; 
 }
 #no2{
-
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
 }
 #no3{
-
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
 }
 #no4{
-
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
 }
 #no5{
-
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1; 
 }
 #no6{
-
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
 }
 #no7{
-
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
 }
 #no8{
-
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
 }
 #no9{
-
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
 }
