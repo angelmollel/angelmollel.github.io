@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(159, 221, 242) (75, 202, 230);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: rgb(47, 71, 206);
+    transition: background-color 0.3s;
+}
+
+
+nav:hover {
+    background-color: darkgreen;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+
+img{
+    width:50vw;
+    height: 50vh;
+    filter: grayscale(100%);
+}
+
+#red-ball{
+    background-color: royalblue;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    transition: 0.3s;
+    animation: balldance 5s infinite alternate;
+}
+
+@keyframes balldance {
+    0% {
+        transform: translateX(0);
+        width: 5%;
+        height: 90%;
+    }
+    100% {
+        transform: translateX(100px);
+    }
+}
+
+#red-ball:hover {
+    transform: translateX(100px)
+}
+
+
+
+
