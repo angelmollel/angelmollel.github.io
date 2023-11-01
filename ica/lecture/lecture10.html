@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid;
+            background-color: blue;
+            color: brown;
+            box-shadow: 1px 1px 2px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <button type="button">Player 1: Chris</button>
+    <button type="button">Press Me</button>
+
+
+
+
+
+    <script>
+        // variables defined using 'const' and 'let'
+        const button = document.querySelector("button");
+        button.addEventListener('click', updateName);
+        function updateName() {
+            let name = prompt ("Enter new name");
+        button.textContent = 'Player 1: ${name}';
+        }
+
+
+    </script>
+</body>
+</html>
