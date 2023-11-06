@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+
+   
+    <title>Silly story generator</title>
+
+    <style>
+        body {
+          font-family: "Arial", sans-serif;
+          width: 350px;
+          margin: 0 auto;
+          background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+          padding: 20px;
+          text-align: center;
+        }
+      
+        label {
+          font-weight: bold;
+          display: block;
+          margin-top: 10px;
+          color: #555;
+        }
+      
+        input[type="text"] {
+          padding: 10px;
+          width: 100%;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-top: 10px;
+          background: #f9f9f9;
+          transition: border-color 0.3s;
+        }
+      
+        input[type="text"]:focus {
+          border-color: #009688;
+        }
+      
+        p.story {
+          background: linear-gradient(135deg, #ffc125, #ffa000);
+          color: #5e2612;
+          padding: 20px;
+          visibility: hidden;
+          border-radius: 10px;
+          margin-top: 20px;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+      
+        .randomize {
+          background: #009688;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+          margin-top: 20px;
+          transition: background 0.3s;
+        }
+      
+        .randomize:hover {
+          background: #007f70;
+        }
+      
+        .radio-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 15px;
+        }
+      
+        .radio-label {
+          display: flex;
+          align-items: center;
+          margin: 0 15px;
+          color: #555;
+        }
+      
+        .radio-label input[type="radio"] {
+          margin-right: 5px;
+        }
+      
+        hr {
+          border: 0;
+          border-top: 1px solid #ccc;
+          margin: 20px 0;
+        }
+      </style>
+      
+      
+  </head>
+
+  <body>
+    <div>
+      <label for="customname">Enter custom name:</label>
+      <input id="customname" type="text" placeholder="" />
+    </div>
+    <div>
+      <label for="us">US</label
+      ><input id="us" type="radio" name="ukus" value="us" checked />
+      <label for="uk">UK</label
+      ><input id="uk" type="radio" name="ukus" value="uk" />
+    </div>
+    <div>
+      <button class="randomize">Generate random story</button>
+    </div>
+    
+    <p class="story"></p>
+
+
+
+    <script src="./silly story.js"></script>
+
+
+  </body>
+</html>
+
+
+
