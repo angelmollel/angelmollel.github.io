@@ -66,12 +66,14 @@
         if (msgType === "warning") {
           msg.textContent = "Your inbox is almost full — delete some mails";
           msg.style.backgroundImage = "url('./ica/icons/warning.png')";
-          panel.style.backgroundColor = "red";
-        } else if (msgType === "chat") {
+          panel.style.backgroundColor = "red"; 
+        }
+        else if (msgType === "chat") {
           msg.textContent = "New chat message!";
-          msg.style.backgroundImage = "url(ica/chat.png)";
+          msg.style.backgroundImage = "url('./ica/icons/chat.png')";
           panel.style.backgroundColor = "aqua";
-        } else {
+        } 
+        else {
           msg.textContent = "This is a generic message.";
           msg.style.paddingLeft = "20px";
         }
