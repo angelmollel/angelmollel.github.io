@@ -1,9 +1,3 @@
-
-
-
-
-
-
 document.addEventListener
 ("DOMContentLoaded", () ==> {
     canvas.width = document.
@@ -32,3 +26,4 @@ function draw(){
         }
 
 }
+
