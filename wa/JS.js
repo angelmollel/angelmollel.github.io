@@ -1,0 +1,82 @@
+const animationDuration = 6000; 
+const maxDigits = 10; 
+
+function startGame() {
+    const randomNumber = Math.floor(Math.random() * 10);
+    appendNumberAndAnimate(randomNumber.toString());
+}
+
+function appendNumberAndAnimate(digit) {
+    const movingNumber = document.createElement('span');
+    movingNumber.classList.add('moving-number');
+    movingNumber.textContent = digit;
+    document.body.appendChild(movingNumber);
+
+   
+    const startPositionX = Math.random() * window.innerWidth;
+    const startPositionY = Math.random() * window.innerHeight;
+    movingNumber.style.left = startPositionX + 'px';
+    movingNumber.style.top = startPositionY + 'px';
+
+   
+    const startTime = Date.now();
+
+   
+    let isClicked = false;
+
+    function animate() {
+        const currentTime = Date.now();
+        const elapsed = currentTime - startTime;
+
+        if (elapsed < animationDuration && !isClicked) {
+            const progress = elapsed / animationDuration;
+            const translateY = progress * (window.innerHeight + 40); 
+            movingNumber.style.transform = `translateY(${translateY}px)`;
+
+            requestAnimationFrame(animate);
+        } else {
+            
+            movingNumber.remove();
+
+           
+            setTimeout(startGame, 500);
+        }
+    }
+
+   
+    movingNumber.addEventListener('click', function clickHandler() {
+        if (!isClicked) {
+            appendNumber(digit);
+            isClicked = true; 
+            movingNumber.removeEventListener('click', clickHandler); 
+        } else {
+            
+            document.getElementById('warningMessage').textContent = 'Number already clicked!';
+        }
+    });
+
+    animate();
+}
+
+function appendNumber(digit) {
+    const phoneNumberDisplay = document.getElementById('phoneNumberDisplay');
+    const currentLength = phoneNumberDisplay.value.replace(/-/g, '').length;
+
+   
+    if (currentLength === 3 || currentLength === 6) {
+        phoneNumberDisplay.value += '-';
+    }
+
+    if (currentLength < maxDigits) {
+        phoneNumberDisplay.value += digit;
+    }
+
+    
+    if (currentLength === maxDigits - 1) {
+       
+        alert(`You entered the complete phone number: ${phoneNumberDisplay.value}`);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', startGame);
